@@ -11,7 +11,7 @@ namespace _1
         static bool Prime(int a) //new  boolean function 
         {
             bool cnt = true; //boolean variable
-            if (a <= 1) // 
+            if (a <= 1) // checking for prime number
             {
                 return false;
             }
@@ -27,20 +27,20 @@ namespace _1
         }
         static void Main(string[] args)
         {
-            string s = Console.ReadLine();
-            int a = int.Parse(s);
-            string ss = Console.ReadLine();
-            int[] arr = new int[a];
-            string[] sss = ss.Split(' ');
+            string s = Console.ReadLine(); // giving a number of array
+            int a = int.Parse(s); // get only numbers from a string line
+            string ss = Console.ReadLine(); // elements of array
+            int[] arr = new int[a]; // new array
+            string[] sss = ss.Split(' '); // if there is one space this is another element
 
-            for(int i = 0; i < sss.Length; i++)
+            for(int i = 0; i < sss.Length; i++) // filling array
             {
                 arr[i] = int.Parse(sss[i]);
             }
 
-            List<int> b = new List<int>();
+            List<int> b = new List<int>(); // new list, like a vector
 
-            foreach(int q in arr)
+            foreach(int q in arr) // foreach checking with boolean function
             {
                 if (Prime(q))
                 {
@@ -48,11 +48,11 @@ namespace _1
                 }
             }
 
-            Console.WriteLine(b.ToArray().Length);
+            Console.WriteLine(b.ToArray().Length); // length of list, array
              
-            foreach(int q in b)
+            foreach(int q in b) 
             {
-                Console.Write(q + " ");
+                Console.Write(q + " "); // elements of list, array
             }
             Console.WriteLine();
         }

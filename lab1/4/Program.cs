@@ -10,10 +10,10 @@ namespace _4
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine()); //Writing number of Star triangle
-            for (int i = 1; i <= a; i++) // Creating Star Triangle
+            int a = int.Parse(Console.ReadLine()); // writing number of star triangle
+            for (int i = 1; i <= a; i++) // creating rows 
             {
-                for (int j = 1; j <= i; j++)
+                for (int j = 1; j <= i; j++) // creating columns
                 {
                     Console.Write("[*]");
                 }
